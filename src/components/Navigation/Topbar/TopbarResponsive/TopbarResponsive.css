@@ -1,0 +1,75 @@
+.topbar-responsive {
+  background-color: var(--themePrimary);
+  overflow: hidden;
+  border-bottom: 1px solid #000;
+  transition: all 0.5s ease-in;
+}
+.topbar-responsive a {
+  color: #fff;
+}
+.topbar-responsive a:visited {
+  color: #fff;
+}
+.navWide {
+  display: none;
+  margin: 0 auto;
+  transition: all 0.5s ease-in;
+}
+.navWide .wideDiv {
+  text-align: center;
+}
+.navWide .wideDiv a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2em;
+}
+.topbar-responsive__ham-btn {
+  cursor: pointer;
+  color: #fff;
+}
+.navNarrow {
+  flex-direction: column;
+  animation-name: fadeInDown;
+}
+.narrowLinks {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  padding: var(--space-sm);
+  background-color: lawngreen;
+  transition: all 0.5s ease-in;
+  /* position: ; */
+  /* top: 100%; */
+}
+.narrowLinks a {
+  text-decoration: none;
+  padding: 0.5em 0;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@media (min-width: 480px) {
+  .topbar-responsive {
+    padding: var(--space-xs);
+  }
+  .navWide {
+    display: block;
+  }
+  .navNarrow {
+    display: none;
+  }
+}
