@@ -14,9 +14,9 @@ export const Btn = ({
   classNameProp,
   handleOnClickProp,
   btnSize = 'md',
-  rounded = 'true',
   variant = 'default',
   disableRipple = false,
+  shape = 'rounded',
 }) => {
   return (
     <button
@@ -27,7 +27,8 @@ export const Btn = ({
         'btn',
         'btn--normal',
         `${!disableRipple && 'ripple'}`,
-        `${rounded ? 'border-radius--default-btn' : ''}`,
+        `${shape === 'rounded' && 'border-radius--default-btn'}`,
+        `${shape === 'capsule' && 'border-radius--capsule'}`,
         `${btnSize ? btnSizes[btnSize] : btnSizes.md}`,
         `${variant ? normalBtnVariants[variant] : ''}`,
         `${classNameProp}`,

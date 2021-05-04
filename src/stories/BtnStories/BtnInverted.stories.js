@@ -29,31 +29,33 @@ export default {
         'light',
       ],
     },
+    shape: {
+      type: 'select',
+      options: ['rounded', 'capsule'],
+    },
   },
 };
 
 const Template = (args) => <BtnInverted {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  rounded: true,
-};
+
 export const Primary = Template.bind({});
 Primary.args = {
   variant: 'primary',
-  rounded: true,
+  shape: 'rounded',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   variant: 'secondary',
-  rounded: true,
+  shape: 'capsule',
 };
 
 export const Success = Template.bind({});
 Success.args = {
   children: 'Success Messege',
-  rounded: true,
+  shape: 'capsule',
   variant: 'success',
 };
 
@@ -72,7 +74,7 @@ Info.args = {
 export const Warning = Template.bind({});
 Warning.args = {
   children: 'Warning Messege',
-  rounded: true,
+  shape: 'capsule',
   variant: 'warning',
 };
 
@@ -83,7 +85,7 @@ Dark.args = {
       <FaMoon> Dark Mode</FaMoon>
     </div>
   ),
-  rounded: true,
+  shape: 'capsule',
   variant: 'dark',
 };
 
@@ -94,6 +96,6 @@ Light.args = {
       <FaSun> Light Mode</FaSun>
     </div>
   ),
-  rounded: true,
+  shape: 'capsule',
   variant: 'light',
 };

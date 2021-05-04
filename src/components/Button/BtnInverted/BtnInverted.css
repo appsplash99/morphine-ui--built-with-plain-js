@@ -1,3 +1,6 @@
+:root {
+  --default-button-inverted-border: 3px;
+}
 .btn--inverted {
   background: transparent;
   background-color: inherit;

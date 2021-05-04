@@ -1,5 +1,4 @@
 import React from 'react';
-// import { BtnSizes } from '../../storyComponent/BtnSizes';
 import { Btn } from '../../components/Button';
 
 const BtnSizes = () => {
@@ -25,4 +24,3 @@ export default {
 const Template = (args) => <BtnSizes {...args} />;
 
 export const DefaultBtnSizesss = Template.bind({});
-DefaultBtnSizesss

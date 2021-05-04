@@ -1,20 +1,16 @@
-/*
-MANAGE THIS STYLE VIA INLINE STYLES FOR VARIANTS
-*/
 .btn--icon {
-  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   background-color: inherit;
   color: var(--dark);
-  padding: var(--space-sm);
   border: 0px none;
   transition: all 2s ease;
   position: relative;
   border: 0px;
   background: none;
-}
-.btn--icon--circular {
-  border-radius: 50%;
 }
 .btn--icon:focus {
   border: 0px;

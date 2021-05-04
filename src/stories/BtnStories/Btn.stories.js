@@ -27,6 +27,10 @@ export default {
       type: 'select',
       options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl', 'xxxl'],
     },
+    shape: {
+      type: 'select',
+      options: ['rounded', 'capsule'],
+    },
   },
 };
 
@@ -38,6 +42,7 @@ export const Warning = Template.bind({});
 Warning.args = {
   variant: 'warning',
   children: 'Warning',
+  shape: 'capsule',
 };
 
 export const Error = Template.bind({});
@@ -62,6 +67,12 @@ export const Dark = Template.bind({});
 Dark.args = {
   variant: 'dark',
   children: 'Dark',
+};
+
+export const Light = Template.bind({});
+Light.args = {
+  variant: 'light',
+  children: 'Light',
 };
 
 export const Primary = Template.bind({});
