@@ -1,7 +1,7 @@
 import React from 'react';
 import './BtnIcon.css';
 import { GiMuscleUp } from 'react-icons/gi';
-import { btnIconSizes } from './btnIconSizes';
+import { btnIconSizes, btnIconShapeVariants } from './btnIconSizes';
 
 export const BtnIcon = ({
   children,
@@ -9,8 +9,8 @@ export const BtnIcon = ({
   classNameProp,
   handleOnClickProp,
   disableRipple = false,
-  btnSize,
-  circular = 'true',
+  btnSize = 'md',
+  variant = 'circular',
 }) => {
   return (
     <button
@@ -19,12 +19,15 @@ export const BtnIcon = ({
       className={[
         'btn',
         'btn--icon',
-        `${circular && 'btn--icon--circular'}`,
         `${!disableRipple && 'ripple'}`,
-        `${btnSize ? btnIconSizes[btnSize] : btnIconSizes.md}`,
         `${classNameProp}`,
       ].join(' ')}
-      style={{ ...styleProp }}
+      style={{
+        ...btnIconSizes[btnSize],
+        ...btnIconShapeVariants(variant),
+        overflow: !disableRipple ? 'visible' : '', // has conflicts with ripple effect
+        ...styleProp,
+      }}
     >
       {children || <GiMuscleUp className="text--xl" />}
     </button>

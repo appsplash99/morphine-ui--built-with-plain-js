@@ -10,7 +10,7 @@ export const BtnInverted = ({
   handleOnClickProp,
   btnSize,
   variant,
-  rounded,
+  shape = 'rounded',
 }) => {
   return (
     <button
@@ -20,7 +20,8 @@ export const BtnInverted = ({
       className={[
         'btn',
         'btn--inverted',
-        `${rounded ? 'border-radius--default-btn' : ''}`,
+        `${shape === 'rounded' && 'border-radius--default-btn'}`,
+        `${shape === 'capsule' && 'border-radius--capsule'}`,
         `${btnSize ? btnSizes[btnSize] : btnSizes.md}`,
         `${variant ? btnInvertedVariants[variant] : ''}`,
         `${classNameProp}`,
